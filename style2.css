@@ -6,7 +6,9 @@
   --border-radius: 1rem;
   --background: #ffffff;
   --box-shadow: var(--background);
-  --primary-color: rgb(6, 42, 128)
+  --primary-color: rgb(6, 42, 128);
+  --secondary-color: rgb(36, 167, 255);
+  --ground-color: rgb(242, 246, 255)
 }
 
 
@@ -20,8 +22,8 @@
   );*/
   background-image: radial-gradient(
     circle farthest-corner at 7.2% 13.6%,
-    rgb(36, 167, 255) 10%,
-    rgb(6, 42, 128) 70%
+    var(--secondary-color) 10%,
+    var(--primary-color) 70%
   );
 
   padding: 1rem;
@@ -33,10 +35,12 @@
 
 .cont-title {
   color: white;
-  font-size: 4rem;
+  font-size: 4vw;
   font-weight: 600;
   margin-bottom: 1rem;
+  text-align: center;
 }
+
 
 .cont-main {
   align-content: center;
@@ -49,10 +53,10 @@
 
 .cont-checkbox {
   width: 27vw;
-  height: 18vw;
+  height: 35vh;
   border-radius: var(--border-radius);
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  background: rgb(255, 255, 255);
+  background: var(--ground-color);
   transition: transform var(--transition);
 }
 
@@ -142,5 +146,22 @@ label .info {
   text-align: center;
   margin-top: 0.2rem;
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 2vw;
+}
+
+.submit-btn{
+  border: 3px solid  var(--secondary-color);
+  border-radius: var(--border-radius);
+  position: fixed;
+  right: 3vw;
+  bottom: 3vw;
+  width: 8vw;
+  aspect-ratio: 2;
+  color: var(--ground-color);
+  background-color: var(--primary-color);
+  font-size: 2.2vw;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
 }
