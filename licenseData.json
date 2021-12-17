@@ -1,0 +1,18 @@
+{
+  "A1": {
+    "name": "SBF See",
+    "age": "16",
+    "area": "Schiffahrtsstraßen",
+    "requirements" : {
+        "other" : "KFZ-Führerschein (ab 18 Jahren)" 
+    }
+  },
+  "A2": {
+    "name": "SBF Binnen",
+    "age": "16",
+    "area": "Binnenschiffahrtsstraßen",
+    "requirements" : {
+        "other" : "KFZ-Führerschein (ab 18 Jahren)" 
+    }
+  }
+}
