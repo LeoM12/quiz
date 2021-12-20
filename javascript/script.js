@@ -24,7 +24,7 @@ function getSelectedValues() {
 }
 
 function getMatchingLicenses(selectedValues){
-    var licenses = ['A1', 'A2', ' SSS bzw. SHS', ' Bodenseeschifferpatent'];
+    var licenses = ['A1', 'A2', 'A3', 'A4'];
     var matchingLicenses = [];
     if (selectedValues.length == 0) {
         alert('Please choose an option.');
