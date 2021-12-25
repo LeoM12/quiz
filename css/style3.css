@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+
 * {
-    font-family: Lato;
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
     margin: 0;
     padding: 0;
     --transition: 0.15s;
@@ -46,6 +49,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    user-select: none;
   }
   
   .cont-checkbox {
@@ -56,6 +60,7 @@
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
     background: var(--ground-color);
     transition: transform var(--transition);
+    user-select: none;
   }
   
   

@@ -38,7 +38,7 @@ var data = {
   A4: {
     name: "Bodenseeschifferpatent (A)",
     description:
-      "Vorgeschrieben für Fahrzeuge mit Maschinenantrieb über 4,4 kW. ",
+      "Vorgeschrieben für Fahrzeuge mit Maschinenantrieb über 4,4 kW auf dem Bodensee. ",
     img: "img/Yacht_Binnen.jpg",
     link: "https://www.abc-wassersport.de/onlinekurse/",
     age: "16",
