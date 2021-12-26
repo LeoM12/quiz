@@ -69,21 +69,22 @@
 
 .img-cont {
   height: 40vh;
-  width: 32vh;
+  width: 32vh;/*32vh*/
   border-radius: var(--border-radius) 0 0 var(--border-radius);
   overflow: hidden;
   display: none;
-  min-width: fit-content;
+  min-width: 32vh;
+  max-width: 32vh;
 }
 
 .lic-img {
   border-radius: var(--border-radius) 0 0 var(--border-radius);
   width: 32vh;
+  max-width: 32vh;
   height: 40vh;
   object-fit: cover;
   outline: 0.3rem solid white;
   outline-offset: -0.3rem;
-  min-width: fit-content;
 }
 
 @media (min-width: 900px) {
@@ -157,7 +158,7 @@
   margin: 6vh auto 0 auto;
   border-radius: var(--border-radius);
   font-size: 4.5vw;
-  background-color: green;
+  background-color: yellow;
   border-color: transparent;
   text-align: center;
 }
