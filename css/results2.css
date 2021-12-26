@@ -157,7 +157,7 @@
   margin: 6vh auto 0 auto;
   border-radius: var(--border-radius);
   font-size: 4.5vw;
-  background-color: var(--secondary-color);
+  background-color: red;
   border-color: transparent;
   text-align: center;
 }
