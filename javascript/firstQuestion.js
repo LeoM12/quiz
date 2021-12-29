@@ -4,10 +4,12 @@ if (typeof window === "object") {
       //---------------------------------------------------------------------------
       const btn = document.querySelector('.submit-btn');
       btn.addEventListener("click", function () {
-        var match = getMatchingLicenses(getSelectedValues());
-        if (match != null) {
-            sessionStorage.setItem("match", JSON.stringify(match));
+        var firstQAnswer = getAnswerString(getSelectedValues());
+        if (firstQAnswer != "") {
+            sessionStorage.setItem("firstQAnswerJSON", JSON.stringify(firstQAnswer));
             window.location.href = 'secQuestion.html';
+        } else{
+          alert("Bitte wählen sie mind. 1 aus.");
         }
       });
     });
@@ -25,16 +27,11 @@ if (typeof window === "object") {
     return selectedValues;
   }
   
-  function getMatchingLicenses(selectedValues){
-      var licenses = ['A1', 'A2', 'A3', 'A4'];
-      var matchingLicenses = [];
-      if (selectedValues.length == 0) {
-          alert('Please choose an option.');
-          return null;
+  function getAnswerString(selectedValues){
+      var answerString ="";
+      for (const value of selectedValues){
+        answerString += value;
       }
-      for (const value of selectedValues) {
-          matchingLicenses.push(licenses[value-1]);
-      }
-      return matchingLicenses;
+      return answerString;
   }
   

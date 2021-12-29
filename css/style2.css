@@ -7,7 +7,7 @@
   --background: #ffffff;
   --box-shadow: var(--background);
   --primary-color: rgb(6, 42, 128);
-  --secondary-color: rgb(36, 167, 255);
+  --accent-color: rgb(36, 167, 255);
   --ground-color: rgb(242, 246, 255)
 }
 
@@ -22,7 +22,7 @@
   );*/
   background-image: radial-gradient(
     circle farthest-corner at 7.2% 13.6%,
-    var(--secondary-color) 10%,
+    var(--accent-color) 10%,
     var(--primary-color) 70%
   );
 
@@ -152,7 +152,7 @@ label .info {
 }
 
 .submit-btn{
-  border: 3px solid  var(--secondary-color);
+  border: 3px solid  var(--accent-color);
   border-radius: var(--border-radius);
   position: fixed;
   right: 3vw;
@@ -165,7 +165,7 @@ label .info {
 }
 
 .submit-btn:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
 }
 
 

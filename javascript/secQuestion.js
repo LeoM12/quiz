@@ -5,8 +5,12 @@ if (typeof window === "object") {
     const btn = document.querySelector('.submit-btn');
     btn.addEventListener("click", function () {
       var match = getMatchingLicenses(getSelectedValues());
+      if (match != null){
       sessionStorage.setItem("match", JSON.stringify(match));
       window.location.href = 'results.html';
+      } else{
+        alert("Bitte wählen sie mind. 1 aus.");
+      }
     });
   });
 }
@@ -24,13 +28,15 @@ function getSelectedValues() {
 }
 
 function getMatchingLicenses(selectedValues){
-    var licenses = ['A1', 'A2', 'A3', 'A4'];
+    //var licenses = ['A1', 'A2', 'A3', 'A4'];
+    var firstQAnswerJSON = sessionStorage.getItem("firstQAnswerJSON");
+    var firstQAnswer = JSON.parse(firstQAnswerJSON);
     var matchingLicenses = [];
     if (selectedValues.length == 0) {
         alert('Please choose an option.');
     }
     for (const value of selectedValues) {
-        matchingLicenses.push(licenses[value-1]);
+        matchingLicenses.push(firstQAnswer + value);
     }
     return matchingLicenses;
 }
