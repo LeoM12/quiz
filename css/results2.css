@@ -160,6 +160,7 @@
   border-radius: var(--border-radius);
   font-size: 4.5vw;
   background-color: var(--accent-color);
+  color: black;
   border-color: transparent;
   text-align: center;
   -webkit-appearance: none;
