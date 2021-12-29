@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Jura&display=swap");
 
 * {
-  font-family: "Jura", sans-serif;
+  font-family: Lato;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -226,6 +226,7 @@ label .info {
   font-size: 1rem;
   display: block;
   margin: 4vh auto;
+  -webkit-appearance: none;
 }
 
 .submit-btn:hover {

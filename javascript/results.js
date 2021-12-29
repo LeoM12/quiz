@@ -119,7 +119,8 @@ function createLicenseCard(match){
   licContainer.appendChild(newParent);
   const btn = document.getElementById(match + "Button");
   btn.addEventListener("click", function () {
-    window.location.href = data[match].link;
+    //window.location.href = data[match].link;
+    window.open(data[match].link);
   });
 }
 
