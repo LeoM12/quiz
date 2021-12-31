@@ -1,0 +1,247 @@
+
+* {
+  font-family: Lato;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  --transition: 0.15s;
+  --border-radius: 1rem;
+  --mobile-border-radius: 0.5rem;
+  --background: #ffffff;
+  --box-shadow: var(--background);
+  --primary-color: rgb(6, 42, 128);
+  --accent-color: rgb(36, 167, 255);
+  --ground-color: rgb(242, 246, 255);
+}
+
+.cont-bg {
+  min-height: 100vh;
+  background-image: radial-gradient(
+    circle farthest-corner at 7.2% 13.6%,
+    var(--accent-color) 10%,
+    var(--primary-color) 70%
+  );
+
+  padding: 1rem;
+}
+
+@media (min-width: 900px) and (orientation :landscape){
+  .cont-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+  }
+}
+
+.cont-title {
+  color: var(--ground-color);
+  font-size: clamp(0.5rem, 2vw + 2rem, 4rem);
+  font-weight: 600;
+  margin: 4vh 3vw 2vh 3vw;
+  text-align: center;
+}
+
+@media (min-width: 900px) and (orientation :landscape) {
+  .cont-title {
+    font-size: 4rem;
+  }
+}
+
+.cont-main  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+@media (min-width: 900px) and (orientation :landscape) {
+  .cont-main {
+    width: 90%;
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1.5vw;
+  }
+}
+
+@media (min-width: 1250px) and (orientation :landscape) {
+  .cont-main {
+    width: 65%;
+  }
+}
+
+.cont-checkbox {
+  margin-top: 20px;
+  width: 60%;
+  height: 25vh;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  background: var(--ground-color);
+  transition: transform var(--transition);
+  user-select: none;
+}
+
+@media (min-width: 900px) and (orientation :landscape) {
+  .cont-checkbox {
+    width: auto;
+    height: 35vh;
+  }
+}
+
+.cont-checkbox:active {
+  transform: scale(0.9);
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  opacity: 1;
+  box-shadow: 0 0 0 3px var(--background);
+}
+
+input:checked + label img {
+  -webkit-filter: none;
+  filter: none;
+  opacity: 1;
+}
+
+input:checked + label .cover-checkbox {
+  opacity: 1;
+  transform: scale(1);
+}
+
+input:checked + label .cover-checkbox svg {
+  stroke-dashoffset: 0;
+}
+
+label {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  opacity: 1;
+}
+
+label img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  clip-path: inset(0 0 0% 0);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(3%);
+  opacity: 0.6;
+}
+
+label .cover-checkbox {
+  position: absolute;
+  right: 5px;
+  top: 3px;
+  z-index: 1;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background: var(--box-shadow);
+  border: 2px solid var(--primary-color);
+  transition: transform var(--transition),
+    opacity calc(var(--transition) * 1.2) linear;
+  opacity: 0;
+  transform: scale(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 900px) and (orientation :landscape) {
+  label .cover-checkbox {
+    width: 1.4vw;
+    height: 1.4vw;
+  }
+}
+
+label .cover-checkbox svg {
+  width: 3vw;
+  height: 2vw;
+  fill: none;
+  margin: 2px 0 0 1px; 
+  stroke: var(--primary-color);
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  transition: stroke-dashoffset 0.4s ease var(--transition);
+  stroke-dashoffset: 16px;
+}
+
+@media (min-width: 900px) and (orientation :landscape) {
+  label .cover-checkbox svg {
+    width: 1vw;
+    height: 0.8vw;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+label .info {
+  text-align: center;
+  margin-top: 0.2rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 900px) and (orientation :landscape) {
+  label .info {
+    font-size: clamp(0.5rem, 0.8vw + 1.2rem, 2rem);
+  }
+}
+
+.cont-bottom-row {
+  width: 100%;
+}
+
+.submit-btn {
+  border: 2px solid white;
+  border-radius: var(--mobile-border-radius);
+  width: 50%;
+  max-height: 8vh;
+  aspect-ratio: 4 / 1;
+  color: var(--ground-color);
+  background-color: transparent;
+  font-size: 1rem;
+  display: block;
+  margin: 4vh auto;
+  -webkit-appearance: none;
+}
+
+.submit-btn:hover {
+  background-color: var(--accent-color);
+  border: var(--accent-color);
+}
+
+@media (min-width: 900px) and (orientation :landscape) {
+  .submit-btn {
+    border-radius: var(--border-radius);
+    width: 20vw;
+    aspect-ratio: 4;
+    font-size: clamp(0.5rem, 0.8vw + 1.2rem, 2rem);
+  }
+}
+
+@media (min-width: 1250px) and (orientation :landscape) {
+  .submit-btn {
+    position: fixed;
+    right: 3vw;
+    bottom: 2vh;
+    width: 12vw;
+    aspect-ratio: 3;
+  }
+}
