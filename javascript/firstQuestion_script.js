@@ -9,7 +9,7 @@ if (typeof window === "object") {
             sessionStorage.setItem("firstQAnswerJSON", JSON.stringify(firstQAnswer));
             window.location.href = 'secQuestion.html';
         } else{
-          alert("Bitte wählen sie mind. 1 aus.");
+          alert("Bitte wählen sie mindestens 1 Möglichgeit aus.");
         }
       });
     });
