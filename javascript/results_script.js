@@ -77,7 +77,29 @@ var data = {
       "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in Küstengewässern (alle Meere bis 12 sm Abstand von der Küste). Voraussetzung: SBF See",
     img: "img/SKS_Segel.jpg",
     link: "https://www.abc-wassersport.de/segelscheine/segelscheinkueste/",
-  }
+  },
+  SRC:{
+    name: "SRC Funkzeugnis",
+    description:
+      "Amtliches Funkzeugnis zum Betrieb einer UKW-Funkstelle im Seefunkdienst im Weltweiten Seenot- und Sicherheitsfunksystem GMDSS (Reichweite bis ca. 35 sm) auf Sportbooten.",
+    img: "img/SRC2.jpg",
+    link: "https://www.abc-wassersport.de/funkzeugnis/src/",
+  },
+  LRC:{
+    name: "LRC Funkzeugnis",
+    description:
+      "Amtliches Funkzeugnis zur uneingeschränkten Teilnahme am Seefunkdienst im GMDSS für UKW, Grenzwelle, Kurzwelle und Seefunk über Satelliten (Inmarsat) auf Sportbooten.",
+    img: "img/LRC.jpg",
+    link: "https://www.abc-wassersport.de/funkzeugnis/lrc/",
+  },
+  UBI:{
+    name: "UBI Funkzeugnis",
+    description:
+      "Amtlicher Funkschein zum Betrieb einer UKW Schiffsfunkstelle auf Binnenschifffahrtsstraßen.",
+    img: "img/UBI.jpg",
+    link: "https://www.abc-wassersport.de/funkzeugnis/ubi/",
+  },
+  
 };
 
 var retrievedData = sessionStorage.getItem("match");
@@ -85,9 +107,10 @@ var matchedLicenses = JSON.parse(retrievedData);
 var licContainer = document.getElementById("lic-cont");
 var headline = document.getElementById("headline");
 
-if (matchedLicenses.length > 1) {
-  headline.innerHTML = "Führerscheinempfehlungen:";
-}
+var mediaQuery = window.matchMedia("(max-width: 900px)");
+generateHeading(mediaQuery);
+
+var secQAnswers = [];
 
 matchedLicenses.forEach((match) => {
   if(match == "B2" || match == "AB2"){
@@ -96,7 +119,18 @@ matchedLicenses.forEach((match) => {
   } else{
     createLicenseCard(match);
   }
+  //Only number values from Question 2 (für Funkzeugnisse)
+  secQAnswers.push(match.charAt(match.length-1));
 });
+
+if (secQAnswers.includes("3")) {
+  createLicenseCard("LRC");
+} else if(secQAnswers.includes("2")){
+  createLicenseCard("SRC");
+}
+if (secQAnswers.includes("1") || secQAnswers.includes("4")){
+  createLicenseCard("UBI");
+}
 
 function createLicenseCard(match){
   //Parent div for each individual card
@@ -148,4 +182,16 @@ function addElement(element, content, className, parent, id) {
   }
   newElement.appendChild(newContent);
   parent.appendChild(newElement);
+}
+
+function generateHeading(mediaQuery) {
+  if (mediaQuery.matches){
+    if(matchedLicenses.length > 1){
+      headline.innerHTML = "Empfehlungen:"
+    } else {
+      headline.innerHTML = "Empfehlung:"
+    }
+  } else{
+    headline.innerHTML = "Führerscheinempfehlungen:"
+  }
 }
