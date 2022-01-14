@@ -89,14 +89,14 @@ var data = {
     name: "LRC Funkzeugnis",
     description:
       "Amtliches Funkzeugnis zur uneingeschränkten Teilnahme am Seefunkdienst im GMDSS für UKW, Grenzwelle, Kurzwelle und Seefunk über Satelliten (Inmarsat) auf Sportbooten.",
-    img: "img/LRC.jpg",
+    img: "img/LRC2.jpg",
     link: "https://www.abc-wassersport.de/funkzeugnis/lrc/",
   },
   UBI:{
     name: "UBI Funkzeugnis",
     description:
       "Amtlicher Funkschein zum Betrieb einer UKW Schiffsfunkstelle auf Binnenschifffahrtsstraßen.",
-    img: "img/UBI.jpg",
+    img: "img/UBI2.jpg",
     link: "https://www.abc-wassersport.de/funkzeugnis/ubi/",
   },
   

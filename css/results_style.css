@@ -65,7 +65,7 @@
 .img-cont {
   height: 40vh;
   width: 32vh;
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  border-radius: var(--border-radius); /*var(--border-radius) 0 0 var(--border-radius)*/
   overflow: hidden;
   display: none;
   min-width: 32vh;
@@ -73,7 +73,7 @@
 }
 
 .lic-img {
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  border-radius: var(--border-radius);
   width: 32vh;
   max-width: 32vh;
   height: 40vh;
