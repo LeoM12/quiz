@@ -11,14 +11,14 @@ var data = {
     name: "Sportbootführerschein Binnen Segel + Motor",
     description:
       "Amtliche Fahrerlaubnis zum Führen von Sportbooten (unter Motor oder Segel) unter 20 Meter Länge auf den Binnenschifffahrtsstraßen (Rhein unter 15 m), vorgeschrieben für Fahrzeuge unter Motor mit mehr als 15 PS (Rhein über 5 PS). In Berliner Gewässern ist der Sportbootführerschein Binnen (Segeln) vorgeschrieben.",
-    img: "img/SBF_Binnen_Segel.jpg",
+    img: "img/SKS_Segel.jpg",
     link: "https://www.abc-wassersport.de/segelscheine/theorie-segeln-binnen/",
   },
   AB1: {
     name: "Sportbootführerschein Binnen Segel + Motor",
     description:
       "Amtliche Fahrerlaubnis zum Führen von Sportbooten (unter Motor oder Segel) unter 20 Meter Länge auf den Binnenschifffahrtsstraßen (Rhein unter 15 m), vorgeschrieben für Fahrzeuge unter Motor mit mehr als 15 PS (Rhein über 5 PS). In Berliner Gewässern ist der Sportbootführerschein Binnen (Segeln) vorgeschrieben.",
-    img: "img/SBF_Binnen_Motor.jpg",
+    img: "img/SBF_Binnen_Segel.jpg",
     link: "https://www.abc-wassersport.de/segelscheine/theorie-segeln-binnen/",
   },
   A2: {
@@ -55,26 +55,33 @@ var data = {
     description:
       "Vorgeschrieben für Fahrzeuge auf dem Bodensee mit Maschinenantrieb über 4,4 kW.",
     img: "img/Bodensee_A.jpg",
-    link: "https://www.abc-wassersport.de/onlinekurse/",
+    link: "https://www.abc-wassersport.de/onlinekurse/onlinekurs/",
   },
   B4: {
     name: "Bodenseeschifferpatent (D)",
     description:
       "Vorgeschrieben für Segelfahrzeuge auf dem Bodensee mit mehr als 12 qm Segelfläche.",
-    img: "img/Bodensee_D.jpg",
-    link: "https://www.abc-wassersport.de/onlinekurse/",
+    img: "img/SBF_Binnen_Segel.jpg",
+    link: "https://www.abc-wassersport.de/onlinekurse/onlinekurs/",
   },
   AB4: {
     name: "Bodenseeschifferpatent (A + D)",
     description:
       "Vorgeschrieben für Fahrzeuge auf dem Bodensee mit Maschinenantrieb über 4,4 kW sowie Segelfahrzeug mit mehr als 12m² Segelfläche.",
-    img: "img/Bodensee_D.jpg",
-    link: "https://www.abc-wassersport.de/onlinekurse/",
+    img: "img/SKS_Segel.jpg",
+    link: "https://www.abc-wassersport.de/onlinekurse/onlinekurs/",
   },
   SKS:{
     name: "Sportküstenschifferschein (SKS)",
     description:
       "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in Küstengewässern (alle Meere bis 12 sm Abstand von der Küste). Voraussetzung: SBF See",
+    img: "img/Bodensee_D.jpg",
+    link: "https://www.abc-wassersport.de/segelscheine/segelscheinkueste/",
+  },
+  SHS:{
+    name: "Sporthochseeschifferschein (SHS)",
+    description:
+      "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in der weltweiten Fahrt (alle Meere). Vorgeschrieben zum Führen von gewerbsmäßig genutzten Sportbooten in der weltweiten Fahrt. Voraussetzung: SSS",
     img: "img/SKS_Segel.jpg",
     link: "https://www.abc-wassersport.de/segelscheine/segelscheinkueste/",
   },
@@ -106,9 +113,6 @@ var retrievedData = sessionStorage.getItem("match");
 var matchedLicenses = JSON.parse(retrievedData);
 var licContainer = document.getElementById("lic-cont");
 var headline = document.getElementById("headline");
-
-var mediaQuery = window.matchMedia("(max-width: 900px)");
-generateHeading(mediaQuery);
 
 var secQAnswers = [];
 
@@ -184,14 +188,3 @@ function addElement(element, content, className, parent, id) {
   parent.appendChild(newElement);
 }
 
-function generateHeading(mediaQuery) {
-  if (mediaQuery.matches){
-    if(matchedLicenses.length > 1){
-      headline.innerHTML = "Empfehlungen:"
-    } else {
-      headline.innerHTML = "Empfehlung:"
-    }
-  } else{
-    headline.innerHTML = "Führerscheinempfehlungen:"
-  }
-}
