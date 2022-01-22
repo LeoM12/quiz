@@ -20,13 +20,45 @@
     var(--accent-color) 10%,
     var(--primary-color) 70%
   );
+  padding: 1rem;
+}
+
+.back-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--ground-color);
+  background-color: transparent;
+  border-radius: 100000px;
+  width: 160px;
+  aspect-ratio: 3.5/1;
+  color: var(--ground-color);
+  font-size: 20px;
+}
+
+.back-arrow{
+  height: 20px;
+  color: var(--ground-color);
+  margin-right: 2px;
+}
+
+@media (max-width: 500px) {
+  .back-btn{
+    width: 40px;
+    height: 40px;
+  }
+  .back-btn-text{
+    display: none;
+  }
+
 }
 
 #headline {
-  font-size: clamp(0.5rem, 3vw + 2.3rem, 6rem);
+  font-size: clamp(0.5rem, 5.3vw + 1rem, 6rem);
   color: white;
   text-align: center;
-  padding-top: 15vh;
+  padding-top: 7vh;
   margin: 0 7vw 0 7vw;
   word-wrap: break-word;
   -webkit-hyphens: auto;
@@ -51,7 +83,13 @@
   padding: 5vh 0 6vh 0;
 }
 
-@media (min-width: 900px) and (orientation :landscape) {
+@media (min-width: 800px) {
+  .lic-card{
+    width: 70%;
+  }
+}
+
+@media (min-width: 900px), (orientation :landscape) {
   .lic-card {
     width: 70%;
     height: 40vh;
@@ -82,7 +120,7 @@
   outline-offset: -0.28rem;
 }
 
-@media (min-width: 900px) and (orientation :landscape) {
+@media (min-width: 900px), (orientation :landscape) {
   .img-cont {
     display: block;
   }
@@ -103,7 +141,7 @@
   height: 100%;
 }
 
-@media (min-width: 900px) and (orientation :landscape) {
+@media (min-width: 900px), (orientation :landscape) {
   .card-text {
     padding: 0 3vw 3vh 2vw;
     
@@ -111,7 +149,7 @@
 }
 
 .name {
-  font-size: 6.5vw;
+  font-size: clamp(1rem, 5.5vw, 3rem);
   text-align: center;
   margin: 0 4vw 6vh 4vw;
   word-wrap: break-word;
@@ -122,12 +160,12 @@
 }
 
 .description {
-  font-size: 5vw;
+  font-size: clamp(1rem, 5vw, 2rem);
   max-width: 95%;
   margin: 0 4vw 0 6vw;
 }
 
-@media (min-width: 900px) and (orientation :landscape) {
+@media (min-width: 900px), (orientation :landscape) {
   .name {
     font-size: 2vw;
     margin: 5vh 0 0 0;
@@ -135,7 +173,7 @@
   }
 
   .description {
-    font-size: clamp(1rem, 1.05vw + 0.65rem, 2rem);
+    font-size: clamp(0.7rem, 1.05vw + 0.65rem, 2rem);
     margin: 3vh 0 0 0;
     text-align: start;
     max-width: none;
@@ -151,11 +189,11 @@
 }
 
 .read-more-btn {
-  width: 70%;
+  width: 60%;
   aspect-ratio: 5 / 1;
   margin: 6vh auto 0 auto;
   border-radius: var(--border-radius);
-  font-size: 4.5vw;
+  font-size: clamp(1rem, 5vw, 2rem);
   background-color: var(--accent-color);
   color: black;
   border-color: transparent;
@@ -163,7 +201,7 @@
   -webkit-appearance: none;
 }
 
-@media (min-width: 900px) and (orientation :landscape) {
+@media (min-width: 900px), (orientation :landscape) {
   .read-more-btn {
     width: 20vw;
     aspect-ratio: 6 / 1;
@@ -182,4 +220,22 @@
     color: var(--accent-color);
     border: 3px solid var(--accent-color);
   }
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  font-size: clamp(0.7rem, 0.6vw + 0.6rem, 1.5rem);
+  width: 100%;
+}
+
+.link-cont{
+  text-decoration: none;
+  color: var(--ground-color);
+  margin-bottom: 2vh;
+}
+
+.footer-link{
+  text-decoration: none;
+  color: var(--ground-color);
 }

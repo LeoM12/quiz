@@ -14,23 +14,73 @@
   --ground-color: rgb(242, 246, 255);
 }
 
-.cont-bg {
+.main-body{
   min-height: 100vh;
   background-image: radial-gradient(
     circle farthest-corner at 7.2% 13.6%,
     var(--accent-color) 10%,
     var(--primary-color) 70%
   );
-
   padding: 1rem;
 }
 
-@media (min-width: 900px) and (orientation :landscape){
+.cont-bg {
+  margin-bottom: 2vh;
+
+}
+
+@media (min-width: 900px) , (orientation :landscape){
   .cont-bg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
+    min-height: 90vh;
+  }
+}
+
+header{
+  height: 40px;
+}
+
+.back-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--ground-color);
+  background-color: transparent;
+  border-radius: 100000px;
+  width: 120px;
+  aspect-ratio: 3/1;
+  color: var(--ground-color);
+  font-size: 20px;
+}
+
+.back-arrow{
+  height: 20px;
+  color: var(--ground-color);
+  margin-right: 2px;
+}
+
+@media (max-width: 900px) {
+  .back-btn{
+    margin-bottom: 3vh;
+    width: 90px;
+    font-size: 15px;
+  }
+  .back-arrow{
+    height: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .back-btn{
+    width: 30px;
+    height: 30px;
+  }
+  .back-btn-text{
+    display: none;
   }
 }
 
@@ -38,11 +88,11 @@
   color: var(--ground-color);
   font-size: clamp(0.5rem, 2vw + 2rem, 4rem);
   font-weight: 600;
-  margin: 4vh 3vw 2vh 3vw;
+  margin: 0 3vw 2vh 3vw;
   text-align: center;
 }
 
-@media (min-width: 900px) and (orientation :landscape) {
+@media (min-width: 900px) , (orientation :landscape) {
   .cont-title {
     font-size: 4rem;
   }
@@ -56,7 +106,7 @@
   user-select: none;
 }
 
-@media (min-width: 900px) and (orientation :landscape) {
+@media (min-width: 900px) , (orientation :landscape) {
   .cont-main {
     width: 90%;
     align-content: center;
@@ -68,9 +118,10 @@
   }
 }
 
-@media (min-width: 1250px) and (orientation :landscape) {
+@media (min-width: 1250px) , (orientation :landscape) {
   .cont-main {
     width: 65%;
+    /* !!!!!!!!!*/
   }
 }
 
@@ -85,7 +136,7 @@
   user-select: none;
 }
 
-@media (min-width: 900px) and (orientation :landscape) {
+@media (min-width: 900px) , (orientation :landscape) {
   .cont-checkbox {
     width: auto;
     height: 35vh;
@@ -161,7 +212,7 @@ label .cover-checkbox {
   justify-content: center;
 }
 
-@media (min-width: 900px) and (orientation :landscape) {
+@media (min-width: 900px) , (orientation :landscape) {
   label .cover-checkbox {
     width: 1.4vw;
     height: 1.4vw;
@@ -182,7 +233,7 @@ label .cover-checkbox svg {
   stroke-dashoffset: 16px;
 }
 
-@media (min-width: 900px) and (orientation :landscape) {
+@media (min-width: 900px) , (orientation :landscape) {
   label .cover-checkbox svg {
     width: 1vw;
     height: 0.8vw;
@@ -198,7 +249,7 @@ label .info {
   font-size: 1.1rem;
 }
 
-@media (min-width: 900px) and (orientation :landscape) {
+@media (min-width: 900px) , (orientation :landscape) {
   label .info {
     font-size: clamp(0.5rem, 0.8vw + 1.2rem, 2rem);
   }
@@ -227,7 +278,7 @@ label .info {
   border: var(--accent-color);
 }
 
-@media (min-width: 900px) and (orientation :landscape) {
+@media (min-width: 900px) , (orientation :landscape) {
   .submit-btn {
     border-radius: var(--border-radius);
     width: 20vw;
@@ -236,12 +287,33 @@ label .info {
   }
 }
 
-@media (min-width: 1250px) and (orientation :landscape) {
+@media (min-width: 1250px) , (orientation :landscape) {
   .submit-btn {
-    position: fixed;
+    /*position: fixed;
     right: 3vw;
-    bottom: 2vh;
+    bottom: 2vh;*/
+    margin: auto 3vw 2vh auto;
+    align-self: flex-end;
     width: 12vw;
-    aspect-ratio: 3;
+    aspect-ratio: 4;
   }
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+
+  font-size: clamp(0.7rem, 0.6vw + 0.6rem, 1.5rem);
+  width: 100%;
+}
+
+.link-cont{
+  text-decoration: none;
+  color: var(--ground-color);
+  margin-bottom: 2vh;
+}
+
+.footer-link{
+  text-decoration: none;
+  color: var(--ground-color);
 }

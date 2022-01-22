@@ -9,71 +9,87 @@
   <title>ABC Führerschein-Finder</title>
 </head>
 <body>
-  <div class="cont-bg">
-    <div class="cont-title">Wo wollen sie fahren?</div>
-    <div class="cont-main">
-      <div class="cont-checkbox">
-        <input type="checkbox" class="input" id="Checkbox-1" value="1" />
-        <label for="Checkbox-1">
-          <img
-            src="img/Binnen_Q2.jpg"
-          />
-          <span class="cover-checkbox">
-            <svg viewbox="0 0 12 10">
-              <polyline class="checkmark" points="1.5 6 4.5 9 10.5 1"></polyline>
-            </svg>
-          </span>
-          <div class="info">Binnengewässer</div>
-        </label>
+  <div class="main-body">
+    <header>
+      <button class="back-btn">
+        <img class="back-arrow" src="img/back_arrow.png">
+        <p class="back-btn-text">Zurück</p>
+      </button>
+    </header>
+    <div class="cont-bg">
+      <div class="cont-title">Wo wollen sie fahren?</div>
+      <div class="cont-main">
+        <div class="cont-checkbox">
+          <input type="checkbox" class="input" id="Checkbox-1" value="1" />
+          <label for="Checkbox-1">
+            <img
+              src="img/Binnen_Q2.jpg"
+            />
+            <span class="cover-checkbox">
+              <svg viewbox="0 0 12 10">
+                <polyline class="checkmark" points="1.5 6 4.5 9 10.5 1"></polyline>
+              </svg>
+            </span>
+            <div class="info">Binnengewässer</div>
+          </label>
+        </div>
+        <div class="cont-checkbox">
+          <input type="checkbox" class="input" id="Checkbox-2" value="2" />
+          <label for="Checkbox-2">
+            <img
+              src="img/Kueste_Q2.jpg"
+            />
+            <span class="cover-checkbox">
+              <svg viewbox="0 0 12 10">
+                <polyline class="checkmark" points="1.5 6 4.5 9 10.5 1"></polyline>
+              </svg>
+            </span>
+            <div class="info">Küstengewässer</div>
+          </label>
+        </div>
+        <div class="cont-checkbox">
+          <input type="checkbox" class="input" id="Checkbox-3" value="3" />
+          <label for="Checkbox-3">
+            <img
+              src="img/Hochsee_Q2.jpg"
+            />
+            <span class="cover-checkbox">
+              <svg viewbox="0 0 12 10">
+                <polyline class="checkmark" points="1.5 6 4.5 9 10.5 1"></polyline>
+              </svg>
+            </span>
+            <div class="info">Hochsee</div>
+          </label>
+        </div>
+        <div class="cont-checkbox">
+          <input type="checkbox" class="input" id="Checkbox-4" value="4"/>
+          <label for="Checkbox-4">
+            <img
+              src="img/Bodensee_Q2.jpg"
+            />
+            <span class="cover-checkbox">
+              <svg viewbox="0 0 12 10">
+                <polyline class="checkmark" points="1.5 6 4.5 9 10.5 1"></polyline>
+              </svg>
+            </span>
+            <div class="info">Bodensee</div>
+          </label>
+        </div>
       </div>
-      <div class="cont-checkbox">
-        <input type="checkbox" class="input" id="Checkbox-2" value="2" />
-        <label for="Checkbox-2">
-          <img
-            src="img/Kueste_Q2.jpg"
-          />
-          <span class="cover-checkbox">
-            <svg viewbox="0 0 12 10">
-              <polyline class="checkmark" points="1.5 6 4.5 9 10.5 1"></polyline>
-            </svg>
-          </span>
-          <div class="info">Küstengewässer</div>
-        </label>
-      </div>
-      <div class="cont-checkbox">
-        <input type="checkbox" class="input" id="Checkbox-3" value="3" />
-        <label for="Checkbox-3">
-          <img
-            src="img/Hochsee_Q2.jpg"
-          />
-          <span class="cover-checkbox">
-            <svg viewbox="0 0 12 10">
-              <polyline class="checkmark" points="1.5 6 4.5 9 10.5 1"></polyline>
-            </svg>
-          </span>
-          <div class="info">Hochsee</div>
-        </label>
-      </div>
-      <div class="cont-checkbox">
-        <input type="checkbox" class="input" id="Checkbox-4" value="4"/>
-        <label for="Checkbox-4">
-          <img
-            src="img/Bodensee_Q2.jpg"
-          />
-          <span class="cover-checkbox">
-            <svg viewbox="0 0 12 10">
-              <polyline class="checkmark" points="1.5 6 4.5 9 10.5 1"></polyline>
-            </svg>
-          </span>
-          <div class="info">Bodensee</div>
-        </label>
+      <div class="cont-bottom-row">
+        <button class="submit-btn">Weiter</button>
       </div>
     </div>
-    <div class="cont-bottom-row">
-      <button class="submit-btn">Weiter</button>
-    </div>
+    <footer>
+      <p class="link-cont">
+        <a href="https://www.abc-wassersport.de/impressum/" class="footer-link">Impressum </a>
+         &#9702;
+        <a href="https://www.abc-wassersport.de/datenschutz/" class="footer-link">Datenschutzerklärung</a>
+      </p>
+    </footer>
   </div>
+  
   <script src="javascript/secQuestion_script.js" defer></script>
 </body>
-</html>
 
+</html>

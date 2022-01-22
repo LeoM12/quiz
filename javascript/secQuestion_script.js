@@ -2,8 +2,12 @@ if (typeof window === "object") {
   // Check if document is finally loaded
   document.addEventListener("DOMContentLoaded", function () {
     //---------------------------------------------------------------------------
-    const btn = document.querySelector('.submit-btn');
-    btn.addEventListener("click", function () {
+    const back_btn = document.querySelector('.back-btn');
+    back_btn.addEventListener("click", function () {
+      window.location.href = 'index.html';
+    });
+    const submit_btn = document.querySelector('.submit-btn');
+    submit_btn.addEventListener("click", function () {
       var match = getMatchingLicenses(getSelectedValues());
       if (match != ""){
       sessionStorage.setItem("match", JSON.stringify(match));

@@ -32,21 +32,21 @@ var data = {
   A3: {
     name: "Sportseeschifferschein (SSS)",
     description:
-      "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in küstennahen Seegewässern (alle Meere bis 30 sm und Ost- und Nordsee, Mittelmeer und Schwarzes Meer). Vorgeschrieben zum Führen von gewerbsmäßig genutzten Sportbooten in den küstennahen Seegewässern. Voraussetzung: Mind. SBF See und 1000 sm",
+      "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in küstennahen Seegewässern (alle Meere bis 30 sm und Ost- und Nordsee, Mittelmeer und Schwarzes Meer). Vorgeschrieben zum Führen von gewerbsmäßig genutzten Sportbooten in den küstennahen Seegewässern. Voraussetzung: SBF See und 1000 sm",
     img: "img/SSS_Motor.jpg",
     link: "https://www.abc-wassersport.de/segelscheine/sportseeschifferschein/",
   },
   B3: {
     name: "Sportseeschifferschein (SSS)",
     description:
-      "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in küstennahen Seegewässern (alle Meere bis 30 sm und Ost- und Nordsee, Mittelmeer und Schwarzes Meer). Vorgeschrieben zum Führen von gewerbsmäßig genutzten Sportbooten in den küstennahen Seegewässern. Voraussetzung: Mind. SBF See und 1000 sm",
+      "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in küstennahen Seegewässern (alle Meere bis 30 sm und Ost- und Nordsee, Mittelmeer und Schwarzes Meer). Vorgeschrieben zum Führen von gewerbsmäßig genutzten Sportbooten in den küstennahen Seegewässern. Voraussetzung: SBF See und 1000 sm",
     img: "img/SSS_Segel.jpg",
     link: "https://www.abc-wassersport.de/segelscheine/sportseeschifferschein/",
   },
   AB3: {
     name: "Sportseeschifferschein (SSS)",
     description:
-      "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in küstennahen Seegewässern (alle Meere bis 30 sm und Ost- und Nordsee, Mittelmeer und Schwarzes Meer). Vorgeschrieben zum Führen von gewerbsmäßig genutzten Sportbooten in den küstennahen Seegewässern. Voraussetzung: Mind. SBF See und 1000 sm",
+      "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in küstennahen Seegewässern (alle Meere bis 30 sm und Ost- und Nordsee, Mittelmeer und Schwarzes Meer). Vorgeschrieben zum Führen von gewerbsmäßig genutzten Sportbooten in den küstennahen Seegewässern. Voraussetzung: SBF See und 1000 sm",
     img: "img/SSS_Segel.jpg",
     link: "https://www.abc-wassersport.de/segelscheine/sportseeschifferschein/",
   },
@@ -65,7 +65,7 @@ var data = {
     link: "https://www.abc-wassersport.de/onlinekurse/onlinekurs/",
   },
   AB4: {
-    name: "Bodenseeschifferpatent (A + D)",
+    name: "Bodenseeschifferpatent (A+D)",
     description:
       "Vorgeschrieben für Fahrzeuge auf dem Bodensee mit Maschinenantrieb über 4,4 kW sowie Segelfahrzeug mit mehr als 12m² Segelfläche.",
     img: "img/SKS_Segel.jpg",
@@ -116,6 +116,11 @@ var headline = document.getElementById("headline");
 
 var secQAnswers = [];
 
+const back_btn = document.querySelector('.back-btn');
+    back_btn.addEventListener("click", function () {
+      window.location.href = 'index.html';
+    });
+
 matchedLicenses.forEach((match) => {
   if(match == "B2" || match == "AB2"){
     createLicenseCard("A2");
@@ -144,7 +149,7 @@ function createLicenseCard(match){
   //Image
   addImg(data[match].img, newParent);
 
-  //Text Content
+  //Text Container
   var textCont = document.createElement("div");
   textCont.classList.add("card-text");
   newParent.appendChild(textCont);
