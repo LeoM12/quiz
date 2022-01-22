@@ -100,20 +100,24 @@
   }
 }
 
+@media (orientation: landscape) and (max-width: 900px) {
+  .lic-card{
+    width: 90%;
+    height: 50vh;
+  }
+}
+
 .img-cont {
   height: 40vh;
   width: 32vh;
   border-radius: var(--border-radius); /*var(--border-radius) 0 0 var(--border-radius)*/
-  overflow: hidden;
+
   display: none;
-  min-width: 32vh;
-  max-width: 32vh;
 }
 
 .lic-img {
   border-radius: var(--border-radius);
   width: 32vh;
-  max-width: 32vh;
   height: 40vh;
   object-fit: cover;
   outline: 0.3rem solid white;
@@ -132,6 +136,17 @@
 
   .lic-card:nth-child(2n) .lic-img{
     border-radius: var(--border-radius);
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px) {
+  .img-cont{
+    height: 50vh;
+    width: 40vh;
+  }
+  .lic-img{
+    height: 50vh;
+    width: 40vh;
   }
 }
 
@@ -180,11 +195,23 @@
   }
 
   .long-text {
-    font-size: clamp(1rem, 1vw + 0.45rem, 1.8rem);
+    font-size: clamp(0.5rem, 1vw + 0.45rem, 1.8rem);
   }
 
   .very-long-text{
-    font-size: clamp(1rem, 0.95vw + 0.4rem, 1.6rem);
+    font-size: clamp(0.5rem, 0.95vw + 0.4rem, 1.6rem);
+  }
+}
+
+@media (orientation: landscape) and (max-width: 900px){
+  .description{
+    font-size: clamp(0.6rem, 1vw + 0.5rem, 2rem);
+  }
+  .long-text{
+    font-size: clamp(00.5rem, 0.95vw + 0.45rem, 1.8rem)
+  }
+  .very-long-text{
+    font-size: clamp(00.5rem, 0.92vw + 0.4rem, 1.6rem)
   }
 }
 
