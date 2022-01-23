@@ -174,7 +174,7 @@
   hyphens: auto;
 }
 
-.description {
+.description, .requirements {
   font-size: clamp(1rem, 5vw, 2rem);
   max-width: 95%;
   margin: 0 4vw 0 6vw;
@@ -187,18 +187,18 @@
     text-align: start;
   }
 
-  .description {
+  .description, .requirements {
     font-size: clamp(0.7rem, 1.05vw + 0.65rem, 2rem);
     margin: 3vh 0 0 0;
     text-align: start;
     max-width: none;
   }
 
-  .long-text {
+  .long-text>p {
     font-size: clamp(0.5rem, 1vw + 0.45rem, 1.8rem);
   }
 
-  .very-long-text{
+  .very-long-text>p{
     font-size: clamp(0.5rem, 0.95vw + 0.4rem, 1.6rem);
   }
 }
@@ -207,10 +207,10 @@
   .description{
     font-size: clamp(0.6rem, 1vw + 0.5rem, 2rem);
   }
-  .long-text{
+  .long-text>p{
     font-size: clamp(00.5rem, 0.95vw + 0.45rem, 1.8rem)
   }
-  .very-long-text{
+  .very-long-text>p{
     font-size: clamp(00.5rem, 0.92vw + 0.4rem, 1.6rem)
   }
 }
