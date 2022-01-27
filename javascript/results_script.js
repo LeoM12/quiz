@@ -2,7 +2,7 @@ var data = {
   A1: {
     name: "Sportbootführerschein (SBF) Binnen Motor",
     description:
-      "Amtliche Fahrerlaubnis zum Führen von Sportbooten (unter Motor) unter 20 Meter Länge auf den Binnenschifffahrtsstraßen (Rhein 15 m), vorgeschrieben für Fahrzeuge unter Motor mit mehr als 15 PS.",
+      "Amtliche Fahrerlaubnis zum Führen von Sportbooten (unter Motor) unter 20 Meter Länge auf den Binnenschifffahrtsstraßen (Rhein 15 m), vorgeschrieben für Fahrzeuge unter Motor mit mehr als 15 PS (Rhein 5 PS).",
     requirement: "None",
     img: "img/SBF_Binnen_Motor.jpg",
     link: "https://www.abc-wassersport.de/segelscheine/motorbootbinnen/",
@@ -36,7 +36,7 @@ var data = {
     name: "Sportseeschifferschein (SSS)",
     description:
       "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in küstennahen Seegewässern (alle Meere bis 30 sm und Ost- und Nordsee, Mittelmeer und Schwarzes Meer). Vorgeschrieben zum Führen von gewerbsmäßig genutzten Sportbooten in den küstennahen Seegewässern.",
-    requirement: "Voraussetzung: SBF See und 1000 Seemeilen",
+    requirement: "Voraussetzung: SBF See und 1000 Seemeilen; SKS empfohlen",
     img: "img/SSS_Motor.jpg",
     link: "https://www.abc-wassersport.de/segelscheine/sportseeschifferschein/",
   },
@@ -44,7 +44,7 @@ var data = {
     name: "Sportseeschifferschein (SSS)",
     description:
       "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in küstennahen Seegewässern (alle Meere bis 30 sm und Ost- und Nordsee, Mittelmeer und Schwarzes Meer). Vorgeschrieben zum Führen von gewerbsmäßig genutzten Sportbooten in den küstennahen Seegewässern.",
-      requirement: "Voraussetzung: SBF See und 1000 Seemeilen",
+      requirement: "Voraussetzung: SBF See und 1000 Seemeilen; SKS empfohlen",
       img: "img/SSS_Segel.jpg",
     link: "https://www.abc-wassersport.de/segelscheine/sportseeschifferschein/",
   },
@@ -52,7 +52,7 @@ var data = {
     name: "Sportseeschifferschein (SSS)",
     description:
       "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in küstennahen Seegewässern (alle Meere bis 30 sm und Ost- und Nordsee, Mittelmeer und Schwarzes Meer). Vorgeschrieben zum Führen von gewerbsmäßig genutzten Sportbooten in den küstennahen Seegewässern.",
-      requirement: "Voraussetzung: SBF See und 1000 Seemeilen",
+      requirement: "Voraussetzung: SBF See und 1000 Seemeilen; SKS empfohlen",
       img: "img/SSS_Segel.jpg",
     link: "https://www.abc-wassersport.de/segelscheine/sportseeschifferschein/",
   },
@@ -83,7 +83,7 @@ var data = {
   SKS: {
     name: "Sportküstenschifferschein (SKS)",
     description:
-      "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in Küstengewässern (alle Meere bis 12 sm Abstand von der Küste).",
+      "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in Küstengewässern (alle Meere bis 12 sm Abstand von der Küste). Vorgeschrieben zum Führen von gewerbsmäßig genutzten Sportbooten in Küstengewässern.",
       requirement: "Voraussetzung: SBF See",
       img: "img/Bodensee_D.jpg",
     link: "https://www.abc-wassersport.de/segelscheine/segelscheinkueste/",
@@ -146,6 +146,7 @@ matchedLicenses.forEach((match) => {
 });
 
 if (secQAnswers.includes("3")) {
+  createLicenseCard("SHS");
   createLicenseCard("LRC");
 } else if(secQAnswers.includes("2")){
   createLicenseCard("SRC");
@@ -199,7 +200,7 @@ function addElement(element, content, className, parent, curMatch, id) {
   newElement.classList.add(className);
   if(content.length >= 320 || ((content.length > 280) && (data[curMatch].requirement != "None"))){
     parent.classList.add("very-long-text");
-  } else if(content.length > 290 && content.length < 320){
+  } else if(content.length > 290 && content.length < 320 || ((content.length > 200) && (data[curMatch].requirement != "None"))){
     parent.classList.add("long-text");
   }
 
