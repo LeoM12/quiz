@@ -29,6 +29,7 @@ if (typeof window === "object") {
   
   function getAnswerString(selectedValues){
       var answerString ="";
+      //A = Motor; B = Segel; AB = Motor und Segel
       for (const value of selectedValues){
         answerString += value;
       }

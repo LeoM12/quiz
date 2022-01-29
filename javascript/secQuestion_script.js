@@ -35,6 +35,7 @@ function getMatchingLicenses(selectedValues){
     var firstQAnswerJSON = sessionStorage.getItem("firstQAnswerJSON");
     var firstQAnswer = JSON.parse(firstQAnswerJSON);
     var matchingLicenses = [];
+    //1 = Binnen; 2 = Küste; 3 = Hochsee; 4 = Bodensee
     for (const value of selectedValues) {
         matchingLicenses.push(firstQAnswer + value);
     }

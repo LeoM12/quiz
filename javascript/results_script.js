@@ -1,3 +1,6 @@
+
+//Warning: Image filenames don't always match the license they are assigned to
+
 var data = {
   A1: {
     name: "Sportbootführerschein (SBF) Binnen Motor",
@@ -93,7 +96,7 @@ var data = {
     description:
       "Amtlicher, empfohlener Führerschein zum Führen von Yachten mit Motor und unter Segel in der weltweiten Fahrt (alle Meere). Vorgeschrieben zum Führen von gewerbsmäßig genutzten Sportbooten in der weltweiten Fahrt.",
       requirement: "Voraussetzung: SSS",
-      img: "img/SKS_Segel.jpg",
+      img: "img/SHS.jpg",
     link: "https://www.abc-wassersport.de/segelscheine/segelscheinkueste/",
   },
   SRC: {
@@ -123,6 +126,7 @@ var data = {
 };
 
 var retrievedData = sessionStorage.getItem("match");
+//matchedLicenses String-Array for example: [AB2, AB3, AB4] OR [B1, B3]
 var matchedLicenses = JSON.parse(retrievedData);
 var licContainer = document.getElementById("lic-cont");
 var headline = document.getElementById("headline");

@@ -1,3 +1,5 @@
+Warning: Image filenames don't always match the license they are assigned to
+
 Motorboot_Q1: https://unsplash.com/photos/o9oQaOGpLz0
 Segelboot_Q1: https://unsplash.com/photos/3AEJ6imbQTo
 Binnen_Q2: https://unsplash.com/photos/75IV0_EFh0c
@@ -11,4 +13,6 @@ SSS_Segel: https://unsplash.com/photos/A0wvBW-Hjbs
 Bodensee_A: https://unsplash.com/photos/st0s-rXJAME
 Bodensee_D: https://unsplash.com/photos/58AiTToabyE
 SKS_Segel: https://unsplash.com/photos/hXPG0Bk6JiM
+SHS: https://unsplash.com/photos/-BcnpZHZJx4
+
 Komprimiert mit: http://jpeg-optimizer.com/
